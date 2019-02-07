@@ -66,7 +66,7 @@ class SList:
     def display(self):
         result = []
         runner = self.head
-        while runner != None:
+        while runner:
             result.append(runner.val)
             runner = runner.next
         print(result)

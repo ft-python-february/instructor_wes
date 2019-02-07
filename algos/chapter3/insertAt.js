@@ -24,16 +24,15 @@ function insertAt(arr, val, idx) {
     arr[i-1] = arr[i];// swap with val
     arr[i] = temp;// return arr
   }
-  console.log(arr);
   return(arr);
 }
 
-var test = [2, 4, 6, -2];
-insertAt(test, -10, 7); // out of bounds >
-insertAt(test, -10, 0); // lower bound
-insertAt(test, -10, 4); // upper bound
-insertAt(test, -10, -1); // out of bounds <
-insertAt(test, -10, 2); // somewhere in the middle
+// var test = [2, 4, 6, -2];
+// insertAt(test, -10, 7); // out of bounds >
+// insertAt(test, -10, 0); // lower bound
+// insertAt(test, -10, 4); // upper bound
+// insertAt(test, -10, -1); // out of bounds <
+// insertAt(test, -10, 2); // somewhere in the middle
 
 // edge cases
   // idx is 0
@@ -45,3 +44,5 @@ insertAt(test, -10, 2); // somewhere in the middle
 // [2,4,6,-10,-2]
 // [2,4,-10,6,-2]
 // [2,-10,4,6,-2]
+
+module.exports = {insertAt};

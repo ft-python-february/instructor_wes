@@ -7,6 +7,11 @@ function rotateArr(arr, shift) {
   // for(var i=0; i < arr.length - 1; i++){
   //   arr[arr.length - 1 - i] = arr[arr.length - 2 - i];
   // }
+  shift = shift % arr.length;
+  if(shift < 0) {
+    shift = arr.length + shift;
+  }
+
   for(var i = 0; i < shift; i++) {
     var temp = arr[arr.length - 1];
     for(var j = arr.length -1; j > 0; j--) {
@@ -18,4 +23,4 @@ function rotateArr(arr, shift) {
   return arr;
 }
 
-console.log(rotateArr([1,2,3,4,5], 3)); // [5, 1, 2, 3, 4]
+console.log(rotateArr([1,2,3,4,5], -3)); // [5, 1, 2, 3, 4]

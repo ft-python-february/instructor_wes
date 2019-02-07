@@ -29,6 +29,8 @@ jenny = Human("Jenny", "Purple")
 sam = Human("Sam", "Purple")
 david = Human("David", "Purple")
 
-david.workout().display_health()
+# david.workout().display_health()
 
-jenny.introduce()
+# jenny.introduce()
+
+print(bool(None))
