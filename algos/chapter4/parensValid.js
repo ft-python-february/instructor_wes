@@ -18,7 +18,7 @@ function parensValid(str) {
   var close = 0;
   for (var i = 0; i < str.length; i++){
     if (str[i] == '('){
-      open +=1;
+      open += 1;
     } else if (str[i] == ')') {
       close += 1;
     }
