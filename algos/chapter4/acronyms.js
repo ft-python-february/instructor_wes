@@ -14,6 +14,7 @@
 function acronyms(str) {
   // create a new string
   var newString = '';
+  str = " " + str;
   // keep any letter that comes after a space
   // start for loop at index 1??
   for(var i = 0; i < str.length - 1; i++) {
@@ -23,6 +24,8 @@ function acronyms(str) {
   }
   return newString.toUpperCase();
 }
-
-console.log(acronyms("     there's no free lunch - gotta pay yer way.    "));
-console.log(acronyms("Live from New York, it's Saturday Night!"));
+tester = "     there's no free lunch - gotta pay yer way.    ";
+test = "Live from New York, it's Saturday Night!";
+console.log(acronyms(tester));
+console.log(acronyms(test));
+console.log(test);
