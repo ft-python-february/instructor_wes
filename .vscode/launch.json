@@ -8,7 +8,14 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
-      "program": "${workspaceFolder}/algos/chapter4/reverseString.js"
-    }
+      "program": "${workspaceFolder}/${file}"
+    },
+    {
+      "name": "Python: Terminal (integrated)",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal"
+    },
   ]
 }
