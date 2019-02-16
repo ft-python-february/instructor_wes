@@ -5,8 +5,8 @@
 //   Bonus : include support for negative indices, representing offsets from string - end.Example: String.slice(-1) returns the string’s last character.
 
 var test = "Hello World";
-console.log(test.slice(0, 2));
-console.log(test);
+// console.log(test.slice(0, 2));
+// console.log(test);
 
 function slice(str, start, end=str.length) {
   var result = "";
@@ -16,4 +16,8 @@ function slice(str, start, end=str.length) {
   return result;
 }
 
-console.log(slice(test, 1, 2));
+module.exports = {
+  slice;
+}
+
+// console.log(slice(test, 1, 2));
