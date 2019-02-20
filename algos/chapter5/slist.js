@@ -97,14 +97,78 @@ class SList {
     }
     return max;
   }
+
+  min() {
+    if(!this.head) {
+      return null;
+    }
+    let min = this.head.val;
+    let curr = this.head;
+    while(curr) {
+      if(curr.val < min) {
+        min = curr.val;
+      }
+      curr = curr.next;
+    }
+    return min;
+  }
+
+  average() {
+    if(!this.head) {
+      return null;
+    }
+    let sum = 0;
+    let curr = this.head;
+    while(curr) {
+      sum += curr.val;
+      curr = curr.next;
+    }
+    return sum / this.length;
+  }
+
+  removeBack() {
+    if(this.head === null) {
+      return this;
+    }
+    if(this.head.next === null) {
+      this.head = null;
+      return this;
+    }
+    let curr = this.head;
+    while(curr.next.next) {
+      curr = curr.next;
+    }
+    curr.next = null;
+    return this;
+  }
+
+  append(val, idx) {
+    if(idx < 0 || idx > this.length - 1) {
+      throw new Error("Index out of range.");
+    }
+    const node = new Node(val);
+    let curr = this.head;
+    let currIdx = 0;
+    while(curr) {
+      if(currIdx < idx) {
+        currIdx++;
+        curr = curr.next;
+      } else {
+        // add new node
+        const temp = curr.next;
+        curr.next = node;
+        node.next = temp;
+        return this;
+      }
+    }
+  }
 }
 
 const list = new SList();
-list.addFront("D").addFront("C").addFront("B").addFront("A").display();
-const num_list = new SList();
-
+list.addFront("D").addFront("C").addFront("B").addFront("A").display().append("Z", 3).display();
+const numList = new SList();
+// numList.addFront(5).addFront(-1).addFront(0).display().removeBack().display().removeBack().display().removeBack().display();
 // console.log(list.contains("B"));
 // console.log(list.front());
 // console.log(list.length);
-console.log(list.max());
 // console.log([1, 2, 3, 4].length);
