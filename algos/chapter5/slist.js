@@ -158,6 +158,7 @@ class SList {
         const temp = curr.next;
         curr.next = node;
         node.next = temp;
+        this.length++;
         return this;
       }
     }
