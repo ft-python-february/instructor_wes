@@ -45,4 +45,6 @@ function insertAt(arr, val, idx) {
 // [2,4,-10,6,-2]
 // [2,-10,4,6,-2]
 
-module.exports = {insertAt};
+module.exports = {
+  insertAt: insertAt
+};

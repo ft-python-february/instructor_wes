@@ -1,0 +1,23 @@
+{
+  "name": "ft-feb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ft-python-february/instructor_wes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ft-python-february/instructor_wes/issues"
+  },
+  "homepage": "https://github.com/ft-python-february/instructor_wes#readme",
+  "devDependencies": {
+    "jest": "^24.1.0",
+    "jest-cli": "^24.1.0"
+  }
+}
